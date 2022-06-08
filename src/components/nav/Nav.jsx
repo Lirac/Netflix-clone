@@ -70,6 +70,7 @@ const Nav = () => {
                 width={100}
                 height="10px"
                 className="w-9 object-contain rounded-md"
+                onMouseLeave={() => setUserDropDown(false)}
               />
 
               <IconContext.Provider value={{ color: 'white', size: '30' }}>
@@ -84,7 +85,6 @@ const Nav = () => {
         </div>
         <NavDropDown
           userDropDown={userDropDown}
-          onloseFocus={setUserDropDown}
         />
       </nav>
     </NavContext.Provider>

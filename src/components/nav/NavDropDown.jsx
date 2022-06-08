@@ -13,6 +13,7 @@ const NavDropDown = () => {
       className={`bg-black/90 text-white py-4 text-[13px] font-medium absolute top-[70px] right-10 transition-all duration-500 ${
         userDropDown ? 'h-fit' : 'h-0 hidden'
       }`}
+      onMouseEnter={() => setUserDropDown(true)}
       onMouseLeave={() => setUserDropDown(false)}
     >
       <IconContext.Provider value={{ color: 'white', size: '30' }}>
