@@ -1,17 +1,18 @@
 import NavItem from './NavItem'
 import { FaBell } from 'react-icons/fa'
-import { MdOutlineSearch } from 'react-icons/md'
 import { MdArrowDropDown } from 'react-icons/md'
 import { IconContext } from 'react-icons'
 import { useEffect, useState } from 'react'
 import NavDropDown from './NavDropDown'
 import { NavContext } from '../../context/NavContext'
+import NavSearchBar from './NavSearchBar'
 
 const navItems = ['Home', 'TV Shows', 'Movies', 'Latest', 'My List']
 
 const Nav = () => {
   const [show, handleShow] = useState(false)
   const [userDropDown, setUserDropDown] = useState(false)
+  const [showSearch, setShowSearch] = useState(false)
   useEffect(() => {
     window.addEventListener('scroll', () => {
       if (window.scrollY > 100) {
@@ -26,9 +27,11 @@ const Nav = () => {
   }, [])
 
   return (
-    <NavContext.Provider value={{ userDropDown, setUserDropDown }}>
+    <NavContext.Provider
+      value={{ userDropDown, setUserDropDown, showSearch, setShowSearch }}
+    >
       <nav
-        className={`container flex justify-between py-4 items-center fixed top-0 z-30 transition-all duration-700 delay-200 ${
+        className={`container flex justify-between py-4 items-center fixed top-0 z-30 transition-all duration-500 delay-200 ${
           show && 'bg-black'
         }`}
       >
@@ -46,9 +49,7 @@ const Nav = () => {
           </div>
         </div>
         <div className="flex gap-5 items-center">
-          <IconContext.Provider value={{ color: 'white', size: '30' }}>
-            <MdOutlineSearch />
-          </IconContext.Provider>
+          <NavSearchBar />
           <NavItem text="Kids" />
           <IconContext.Provider value={{ color: 'white', size: '25' }}>
             <div className="relative">
