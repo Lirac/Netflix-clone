@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import { FaFacebookF, FaInstagram, FaYoutube } from 'react-icons/fa'
 import { IconContext } from 'react-icons'
 
