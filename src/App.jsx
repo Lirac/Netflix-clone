@@ -9,7 +9,7 @@ function App() {
     <div className="bg-black">
       <Nav />
       <Banner />
-      <div className="ml-16 bg-transparent mt-[-20vh] z-10">
+      <div className="ml-16 bg-transparent mt-[-1vh] z-10">
         <Row
           title="NETFLIX ORIGINALS"
           fetchUrl={requests.fetchNetflixOriginals}
