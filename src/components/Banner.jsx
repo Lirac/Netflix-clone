@@ -31,20 +31,20 @@ const Banner = () => {
         backgroundImage: `url("https://image.tmdb.org/t/p/original/${movie?.backdrop_path}")`,
         backgroundPosition: 'center center',
       }}
-      className="text-white object-contain h-[100vh] relative"
+      className="text-white object-contain h-[55vw] xl:h-[90vh] relative"
     >
-      <div className="ml-16 w-[35%] absolute bottom-[250px]">
-        <h1 className="text-7xl font-extrabold my-2">
+      <div className="ml-8 w-[50%] md:w-[35%] absolute top-[40%]">
+        <h1 className="text-[4vw] font-bold my-2">
           {movie?.title || movie?.name || movie?.original_name}
         </h1>
-        <h1 className="text-lg">{truncate(movie?.overview, 150)}</h1>
+        <h1 className="text-[1.8vw] leading-[2vw] md:leading-5 lg:leading-7 lg:text-lg">{truncate(movie?.overview, 150)}</h1>
         <div className="mt-4 flex">
-          <button className="px-8 py-2 font-bold bg-white hover:bg-white/90 text-black rounded-md mr-2 flex justify-center items-center gap-3 text-lg duration-200 ease-in transition-all">
+          <div className="px-2 lg:px-8 lg:py-2  font-medium bg-white hover:bg-white/90 text-black rounded-sm md:rounded-md mr-2 flex justify-around items-center gap-2 text-[1.8vw] lg:text-lg duration-200 ease-in transition-all">
             <FaPlay />
             Play
-          </button>
-          <button className="px-8 py-2 font-bold bg-gray-400/80 hover:bg-gray-400/50 text-white rounded-md mr-2 flex justify-center items-center gap-3 text-lg duration-200 ease-in transition-all">
-            <IconContext.Provider value={{ size: '30' }}>
+          </div>
+          <button className=" py-1 px-2 lg:px-8 lg:py-2 font-semibold bg-gray-400/80 hover:bg-gray-400/50 text-white rounded-sm md:rounded-md  flex justify-center items-center gap-2 text-[1.8vw] lg:text-lg duration-200 ease-in transition-all">
+            <IconContext.Provider value={{ }}>
               <MdInfoOutline /> More Info
             </IconContext.Provider>
           </button>
@@ -62,7 +62,7 @@ const Banner = () => {
           16+
         </button>
       </div>
-      <div className="h-28 bg-gradient-to-b from-transparent to-black absolute bottom-0 w-full"></div>
+      <div className="h-20 bg-gradient-to-b from-transparent to-black absolute bottom-0 w-full"></div>
     </header>
   )
 }

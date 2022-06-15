@@ -66,7 +66,7 @@ const Row = ({ title, fetchUrl }) => {
         </div>
       </div>
 
-      <div className="flex overflow-y-hidden overflow-x-scroll py-8 scrollbar">
+      <div className="flex overflow-y-hidden overflow-x-scroll py-5 scrollbar">
         {movies.map(movie => (
           <img
             key={movie.id}
