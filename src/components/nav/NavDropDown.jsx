@@ -26,7 +26,7 @@ const NavDropDown = () => {
             alt=""
             className="rounded-md"
           />
-          <a href="#" className="hover:underline">
+          <a href="q" className="hover:underline">
             Kids
           </a>
         </div>
@@ -34,7 +34,7 @@ const NavDropDown = () => {
           <IconContext.Provider value={{ color: 'gray', size: '20' }}>
             <BsPencilFill />
           </IconContext.Provider>
-          <a href="#" className="hover:underline">
+          <a href="q" className="hover:underline">
             Manage Profiles
           </a>
         </div>
@@ -44,7 +44,7 @@ const NavDropDown = () => {
           <IconContext.Provider value={{ color: 'gray', size: '20' }}>
             <BiUser />
           </IconContext.Provider>
-          <a href="#" className="hover:underline">
+          <a href="q" className="hover:underline">
             Account
           </a>
         </div>
@@ -52,14 +52,14 @@ const NavDropDown = () => {
           <IconContext.Provider value={{ color: 'gray', size: '20' }}>
             <BiHelpCircle />
           </IconContext.Provider>
-          <a href="#" className="hover:underline">
+          <a href="q" className="hover:underline">
             Help Center
           </a>
         </div>
       </div>
       <div className="pl-3 py-1 pr-8 flex justify-center">
         <div className='cursor-pointer'>
-          <a href="#" className="hover:underline">
+          <a href="q" className="hover:underline">
             Sign out of Netflix
           </a>
         </div>
