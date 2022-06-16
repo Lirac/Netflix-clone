@@ -41,7 +41,7 @@ const Nav = () => {
       }}
     >
       <nav
-        className={`w-full py-1 px-4  lg:py-3  fixed top-0 z-30 transition-all duration-500 delay-200 ${
+        className={`w-full py-1 px-2 lg:px-4  lg:py-3  fixed top-0 z-30 transition-all duration-500 delay-200 ${
           show && 'bg-black'
         }`}
       >

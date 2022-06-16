@@ -53,7 +53,7 @@ const Row = ({ title, fetchUrl }) => {
           setTitleHover(true)
         }}
       >
-        <h2 className="font-bold text-xl text-white mr-2">{title}</h2>
+        <h2 className="font-bold text-[4vw] text-white mr-2">{title}</h2>
         <div
           className={`${
             titleHover ? 'visible opacity-100' : 'invisible opacity-0'
