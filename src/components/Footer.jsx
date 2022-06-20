@@ -12,43 +12,43 @@ const footer = () => {
         </IconContext.Provider>
       </div>
       <div className="text-gray-200/60 text-xs flex flex-wrap gap-x-14 md:gap-x-24 gap-y-4 mt-4 lg:font-medium">
-        <a href="q" className="basis-[35%] md:basis-[16%] hover:underline">
+        <a href="q" className="basis-[38%] md:basis-[16%] hover:underline">
           Audio and Subtitles
         </a>
-        <a href="q" className=" basis-[35%] md:basis-[16%] hover:underline">
+        <a href="q" className=" basis-[38%] md:basis-[16%] hover:underline">
           Audio Description
         </a>
-        <a href="q" className=" basis-[35%] md:basis-[16%] hover:underline">
+        <a href="q" className=" basis-[38%] md:basis-[16%] hover:underline">
           Help Center
         </a>
-        <a href="q" className=" basis-[35%] md:basis-[16%] hover:underline">
+        <a href="q" className=" basis-[38%] md:basis-[16%] hover:underline">
           Gift Cards
         </a>
-        <a href="q" className=" basis-[35%] md:basis-[16%] hover:underline">
+        <a href="q" className=" basis-[38%] md:basis-[16%] hover:underline">
           Media Center
         </a>
-        <a href="q" className=" basis-[35%] md:basis-[16%] hover:underline">
+        <a href="q" className=" basis-[38%] md:basis-[16%] hover:underline">
           Investor Relations
         </a>
-        <a href="q" className=" basis-[35%] md:basis-[16%] hover:underline">
+        <a href="q" className=" basis-[38%] md:basis-[16%] hover:underline">
           Jobs
         </a>
-        <a href="q" className=" basis-[35%] md:basis-[16%] hover:underline">
+        <a href="q" className=" basis-[38%] md:basis-[16%] hover:underline">
           Terms of Use
         </a>
-        <a href="q" className=" basis-[35%] md:basis-[16%] hover:underline">
+        <a href="q" className=" basis-[38%] md:basis-[16%] hover:underline">
           Privacy
         </a>
-        <a href="q" className=" basis-[35%] md:basis-[16%] hover:underline">
+        <a href="q" className=" basis-[38%] md:basis-[16%] hover:underline">
           Legal Notices
         </a>
-        <a href="q" className="basis-[35%] md:basis-[16%] hover:underline">
+        <a href="q" className="basis-[38%] md:basis-[16%] hover:underline">
           Cookie Preference
         </a>
-        <a href="q" className="basis-[35%] md:basis-[16%] hover:underline">
+        <a href="q" className="basis-[38%] md:basis-[16%] hover:underline">
           Corporate Information
         </a>
-        <a href="q" className="basis-[35%] md:basis-[16%] hover:underline">
+        <a href="q" className="basis-[38%] md:basis-[16%] hover:underline">
           Contact Us
         </a>
       </div>
