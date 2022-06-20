@@ -8,7 +8,7 @@ function App() {
   return (
     <div className="bg-black">
       <Nav />
-      <Banner />
+      <Banner/>
       <div className="ml-4 lg:ml-8 bg-transparent xl:mt-[-0.6vw] pt-2 z-10">
         <Row
           title="NETFLIX ORIGINALS"

@@ -76,7 +76,7 @@ const Nav = () => {
               <NavItem text="Kids" />
             </span>
             <IconContext.Provider value={{ color: 'white', size: '25' }}>
-              <div className="relative">
+              <div className="relative hidden md:block">
                 <FaBell />
                 <span className="absolute top-[-5px] right-[-5px] text-white bg-red-700 rounded-[50%] w-3 h-3 p-2 flex items-center justify-center text-xs font-semibold">
                   3
@@ -91,7 +91,7 @@ const Nav = () => {
                 <img
                   src="https://upload.wikimedia.org/wikipedia/commons/0/0b/Netflix-avatar.png"
                   alt=""
-                  className="w-7 lg:w-9 object-contain rounded-md cursor-pointer"
+                  className="w-7 lg:w-9 object-contain rounded-md cursor-pointer hidden md:block"
                   onMouseLeave={() => setUserDropDown(false)}
                 />
 

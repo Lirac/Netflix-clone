@@ -43,6 +43,7 @@ const Row = ({ title, fetchUrl }) => {
   }
   return (
     <div
+    className='mt-8'
       onMouseLeave={() => {
         setTitleHover(false)
       }}
@@ -66,14 +67,14 @@ const Row = ({ title, fetchUrl }) => {
         </div>
       </div>
 
-      <div className="flex overflow-y-hidden overflow-x-scroll py-5 scrollbar">
+      <div className="flex overflow-y-hidden overflow-x-scroll md:py-5 scrollbar">
         {movies.map(movie => (
           <img
             key={movie.id}
             src={`${base_url}${movie.poster_path}`}
             alt={movie.name}
             onClick={() => handleHover(movie)}
-            className="relative w-96 h-40 object-fill z-0 cursor-pointer transition-all ease-in delay-300 duration-300 mr-1 hover:scale-150 hover:z-20 rounded-sm"
+            className="relative w-96 h-40 object-fill z-0 cursor-pointer transition-all ease-in delay-300 duration-300 mr-1 md:hover:scale-150 hover:z-20 rounded-sm"
           />
         ))}
       </div>

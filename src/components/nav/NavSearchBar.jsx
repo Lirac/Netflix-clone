@@ -12,14 +12,14 @@ const NavSearchBar = () => {
       }`}
     >
       <IconContext.Provider value={{ color: 'white', size: '30' }}>
-        <MdOutlineSearch onClick={() => setShowSearch(true)} />
+        <MdOutlineSearch onClick={() => setShowSearch(true)} className='hidden md:block' />
       </IconContext.Provider>
       <input
         type="text"
         name=""
         id="search"
         className={`bg-transparent border-0 outline-none text-sm font-medium text-white px-2 ${
-          showSearch ? '' : 'hidden'
+          showSearch ? '' : 'md:hidden'
         }`}
         placeholder="Title, people, genres"
         ref={input => input && input.focus()}
