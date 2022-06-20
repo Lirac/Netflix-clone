@@ -18,7 +18,7 @@ const NavSearchBar = () => {
         type="text"
         name=""
         id="search"
-        className={`bg-transparent border-0 outline-none text-sm font-medium text-white px-2 ${
+        className={`bg-transparent border-0 outline-none text-sm md:font-medium text-white px-2 placeholder:text-xs ${
           showSearch ? '' : 'md:hidden'
         }`}
         placeholder="Title, people, genres"

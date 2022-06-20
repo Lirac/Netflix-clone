@@ -1,5 +1,5 @@
 import NavItem from './NavItem'
-import { FaBell } from 'react-icons/fa'
+import { FaBell, FaBars } from 'react-icons/fa'
 import { MdArrowDropDown } from 'react-icons/md'
 import { IconContext } from 'react-icons'
 import { useEffect, useState } from 'react'
@@ -7,6 +7,7 @@ import NavDropDown from './NavDropDown'
 import NavBrowseDropDown from './NavBrowseDropDown'
 import { NavContext } from '../../context/NavContext'
 import NavSearchBar from './NavSearchBar'
+import Sidebar from '../Sidebar'
 
 const navItems = ['Home', 'TV Shows', 'Movies', 'Latest', 'My List']
 
@@ -15,6 +16,7 @@ const Nav = () => {
   const [userDropDown, setUserDropDown] = useState(false)
   const [showSearch, setShowSearch] = useState(false)
   const [browseClicked, setBrowseClicked] = useState(false)
+  const [showSidebar, setShowSidebar] = useState(false)
 
   useEffect(() => {
     window.addEventListener('scroll', () => {
@@ -38,33 +40,37 @@ const Nav = () => {
         setShowSearch,
         browseClicked,
         setBrowseClicked,
+        showSidebar,
+        setShowSidebar,
       }}
     >
       <nav
-        className={`w-full py-1 px-2 lg:px-4  lg:py-3  fixed top-0 z-30 transition-all duration-500 delay-200 ${
+        className={`w-full py-1 px-4 lg:px-4  lg:py-3  fixed top-0 z-30 transition-all duration-500 delay-200 ${
           show && 'bg-black'
         }`}
       >
-        <div className="flex items-center">
+        <Sidebar />
+        <div className="flex justify-between items-center">
           <div className="flex mr-16">
+            <IconContext.Provider value={{ color: 'white' }}>
+              <FaBars onClick={() => setShowSidebar(!showSidebar)} />
+            </IconContext.Provider>
             <img
               src="https://pngimg.com/uploads/netflix/small/netflix_PNG12.png"
               alt="Nav logo"
               className="w-[14vw] md:w-[12vw] lg:w-36 object-contain mr-6 lg:mr-10"
             />
             <div
-              className="lg:hidden flex items-center cursor-pointer"
+              className="hidden items-center cursor-pointer"
               onMouseOver={() => setBrowseClicked(true)}
               onMouseLeave={() => setBrowseClicked(false)}
             >
               <p className="text-white text-[1.5vw] font-medium">Browse</p>
               <IconContext.Provider value={{ color: 'white', size: '25' }}>
-                <MdArrowDropDown
-                 className='lg:hidden'
-                />
+                <MdArrowDropDown className="lg:hidden" />
               </IconContext.Provider>
             </div>
-            <div className="hidden lg:flex gap-4 items-center">
+            <div className="hidden md:flex gap-4 items-center">
               {navItems.map(item => (
                 <NavItem text={item} />
               ))}

@@ -11,7 +11,7 @@ const footer = () => {
           <FaYoutube className="cursor-pointer" />
         </IconContext.Provider>
       </div>
-      <div className="text-gray-200/60 text-xs flex flex-wrap gap-x-16 md:gap-x-24 gap-y-4 mt-4 lg:font-medium">
+      <div className="text-gray-200/60 text-xs flex flex-wrap gap-x-14 md:gap-x-24 gap-y-4 mt-4 lg:font-medium">
         <a href="q" className="basis-[35%] md:basis-[16%] hover:underline">
           Audio and Subtitles
         </a>

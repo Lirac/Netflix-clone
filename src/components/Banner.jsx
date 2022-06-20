@@ -50,7 +50,7 @@ const Banner = () => {
           </button>
         </div>
       </div>
-      <div className="absolute right-0 bottom-[250px] flex gap-3 items-center">
+      <div className="hidden absolute right-0 top-[65%] md:flex gap-3 items-center">
         <span className="w-full bg-transparent border-2 p-2 hover:opacity-70 rounded-full cursor-pointer duration-200 ease-in transition-all">
           <IconContext.Provider value={{ size: '20' }}>
             <div>

@@ -6,7 +6,8 @@ import requests from './services/request'
 
 function App() {
   return (
-    <div className="bg-black">
+    <div className="bg-black relative">
+
       <Nav />
       <Banner/>
       <div className="ml-4 lg:ml-8 bg-transparent xl:mt-[-0.6vw] pt-2 z-10">
