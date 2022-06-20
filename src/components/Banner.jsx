@@ -31,7 +31,7 @@ const Banner = () => {
         backgroundImage: `url("https://image.tmdb.org/t/p/original/${movie?.backdrop_path}")`,
         backgroundPosition: 'center center',
       }}
-      className="text-white object-contain h-[55vw] xl:h-[90vh] relative hidden md:block"
+      className="text-white object-contain h-[55vw] xl:h-[90vh] relative"
     >
       <div className="ml-4 lg:ml-8 w-[50%] md:w-[35%] absolute top-[40%]">
         <h1 className="text-[4vw] font-bold my-2">

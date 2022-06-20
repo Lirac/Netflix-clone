@@ -45,8 +45,8 @@ const Nav = () => {
           show && 'bg-black'
         }`}
       >
-        <div className="flex justify-between items-center">
-          <div className="flex">
+        <div className="flex items-center">
+          <div className="flex mr-16">
             <img
               src="https://pngimg.com/uploads/netflix/small/netflix_PNG12.png"
               alt="Nav logo"
