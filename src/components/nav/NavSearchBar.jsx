@@ -18,10 +18,10 @@ const NavSearchBar = () => {
         type="text"
         name=""
         id="search"
-        className={`bg-transparent border-0 outline-none text-sm md:font-medium text-white px-2 placeholder:text-xs ${
+        className={`bg-transparent border-2 md:border-0 outline-none text-sm md:font-medium text-white px-2 placeholder:text-xs placeholder:text-slate-400 w-[30vw] md:w-fit ${
           showSearch ? '' : 'md:hidden'
         }`}
-        placeholder="Title, people, genres"
+        placeholder="Search"
         ref={input => input && input.focus()}
         onBlur={() => setShowSearch(false)}
       />
