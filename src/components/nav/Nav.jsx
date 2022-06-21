@@ -53,7 +53,7 @@ const Nav = () => {
         <div className="flex justify-between items-center">
           <div className="flex mr-16">
             <IconContext.Provider value={{ color: 'white', size: '25' }}>
-              <FaBars onClick={() => setShowSidebar(!showSidebar)} className='md:hidden' />
+              <FaBars onClick={() => setShowSidebar(!showSidebar)} />
             </IconContext.Provider>
             <img
               src="https://pngimg.com/uploads/netflix/small/netflix_PNG12.png"
