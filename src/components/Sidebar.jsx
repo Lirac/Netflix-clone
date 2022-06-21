@@ -23,7 +23,7 @@ const Sidebar = () => {
   ]
   return (
     <div
-      className={`w-2/3 bg-black fixed left-0 top-[3.8%] z-50 h-full transition-all duration-300 ease-linear overflow-y-auto pb-8 ${
+      className={`w-2/3 bg-black fixed left-0 top-[4.2%] z-50 h-full transition-all duration-300 ease-linear overflow-y-auto pb-8 ${
         showSidebar ? 'visible' : 'invisible'
       }`}
       onMouseLeave={() => setShowSidebar(false)}
