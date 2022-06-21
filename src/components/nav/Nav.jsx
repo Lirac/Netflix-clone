@@ -53,7 +53,7 @@ const Nav = () => {
         <div className="flex justify-between items-center">
           <div className="flex mr-16">
             <IconContext.Provider value={{ color: 'white', size: '25' }}>
-              <FaBars onClick={() => setShowSidebar(!showSidebar)} />
+              <FaBars className='md:hidden' onClick={() => setShowSidebar(!showSidebar)} />
             </IconContext.Provider>
             <img
               src="https://pngimg.com/uploads/netflix/small/netflix_PNG12.png"
@@ -71,8 +71,8 @@ const Nav = () => {
               </IconContext.Provider>
             </div>
             <div className="hidden md:flex gap-4 items-center">
-              {navItems.map(item => (
-                <NavItem text={item} />
+              {navItems.map((item, index) => (
+                <NavItem key={index} text={item} />
               ))}
             </div>
           </div>

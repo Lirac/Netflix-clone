@@ -23,10 +23,9 @@ const Sidebar = () => {
   ]
   return (
     <div
-      className={`w-2/3 bg-black fixed left-0 top-[3.4%] z-50 h-full transition-all duration-300 ease-linear overflow-y-auto pb-8 ${
+      className={`w-2/3 bg-black fixed left-0 top-[3.8%] z-50 h-full transition-all duration-300 ease-linear overflow-y-auto pb-8 ${
         showSidebar ? 'visible' : 'invisible'
       }`}
-      onMouseEnter={()=> setShowSidebar(true)}
       onMouseLeave={() => setShowSidebar(false)}
     >
       <div className="text-white/70">
@@ -47,8 +46,9 @@ const Sidebar = () => {
           <h3 className="font-semibold">Sign Out of Netflix</h3>
         </div>
         <div>
-          {categories.map(item => (
+          {categories.map((item, index) => (
             <a
+              key={index}
               href="Home#"
               className="px-4 font-semibold active:border-l-4 border-red-500 mb-1 py-1 block"
             >
