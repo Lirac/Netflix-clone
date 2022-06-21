@@ -47,13 +47,12 @@ const Sidebar = () => {
         </div>
         <div>
           {categories.map((item, index) => (
-            <a
+            <h3
               key={index}
-              href="Home#"
               className="px-4 font-semibold active:border-l-4 border-red-500 mb-1 py-1 block"
             >
               {item}
-            </a>
+            </h3>
           ))}
         </div>
       </div>
