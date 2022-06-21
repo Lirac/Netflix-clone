@@ -12,45 +12,45 @@ const footer = () => {
         </IconContext.Provider>
       </div>
       <div className="text-gray-200/60 text-xs flex flex-wrap gap-x-14 md:gap-x-24 gap-y-4 mt-4 lg:font-medium">
-        <a href="q" className="basis-[38%] md:basis-[16%] hover:underline">
+        <p href="q" className="basis-[35%] md:basis-[16%] hover:underline cursor-pointer">
           Audio and Subtitles
-        </a>
-        <a href="q" className=" basis-[38%] md:basis-[16%] hover:underline">
+        </p>
+        <p href="q" className=" basis-[35%] md:basis-[16%] hover:underline cursor-pointer">
           Audio Description
-        </a>
-        <a href="q" className=" basis-[38%] md:basis-[16%] hover:underline">
+        </p>
+        <p href="q" className=" basis-[35%] md:basis-[16%] hover:underline cursor-pointer">
           Help Center
-        </a>
-        <a href="q" className=" basis-[38%] md:basis-[16%] hover:underline">
+        </p>
+        <p href="q" className=" basis-[35%] md:basis-[16%] hover:underline cursor-pointer">
           Gift Cards
-        </a>
-        <a href="q" className=" basis-[38%] md:basis-[16%] hover:underline">
+        </p>
+        <p href="q" className=" basis-[35%] md:basis-[16%] hover:underline cursor-pointer">
           Media Center
-        </a>
-        <a href="q" className=" basis-[38%] md:basis-[16%] hover:underline">
+        </p>
+        <p href="q" className=" basis-[35%] md:basis-[16%] hover:underline cursor-pointer">
           Investor Relations
-        </a>
-        <a href="q" className=" basis-[38%] md:basis-[16%] hover:underline">
+        </p>
+        <p href="q" className=" basis-[35%] md:basis-[16%] hover:underline cursor-pointer">
           Jobs
-        </a>
-        <a href="q" className=" basis-[38%] md:basis-[16%] hover:underline">
+        </p>
+        <p href="q" className=" basis-[35%] md:basis-[16%] hover:underline">
           Terms of Use
-        </a>
-        <a href="q" className=" basis-[38%] md:basis-[16%] hover:underline">
+        </p>
+        <p href="q" className=" basis-[35%] md:basis-[16%] hover:underline cursor-pointer">
           Privacy
-        </a>
-        <a href="q" className=" basis-[38%] md:basis-[16%] hover:underline">
+        </p>
+        <p href="q" className=" basis-[35%] md:basis-[16%] hover:underline cursor-pointer">
           Legal Notices
-        </a>
-        <a href="q" className="basis-[38%] md:basis-[16%] hover:underline">
+        </p>
+        <p href="q" className="basis-[35%] md:basis-[16%] hover:underline">
           Cookie Preference
-        </a>
-        <a href="q" className="basis-[38%] md:basis-[16%] hover:underline">
+        </p>
+        <p href="q" className="basis-[35%] md:basis-[16%] hover:underline cursor-pointer">
           Corporate Information
-        </a>
-        <a href="q" className="basis-[38%] md:basis-[16%] hover:underline">
+        </p>
+        <p href="q" className="basis-[35%] md:basis-[16%] hover:underline cursor-pointer">
           Contact Us
-        </a>
+        </p>
       </div>
       <div className="border border-gray-200/60 text-gray-200/60 text-xs font-semibold p-2 inline-block mt-8 cursor-pointer hover:text-white">
         Service Code
