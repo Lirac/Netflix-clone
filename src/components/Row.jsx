@@ -6,15 +6,19 @@ import { MdArrowForwardIos } from 'react-icons/md'
 import { MdArrowBackIos } from 'react-icons/md'
 import { IconContext } from 'react-icons/lib'
 import { useRef } from 'react'
+import { useRecoilState } from 'recoil'
+import { movieState } from '../atoms/modalAtom'
+import { modalState } from '../atoms/modalAtom'
 
 const base_url = 'https://image.tmdb.org/t/p/original/'
 
 const Row = ({ title, fetchUrl }) => {
   const [movies, setMovies] = useState([])
-  const [trailerUrl, setTrailerUrl] = useState('')
   const [titleHover, setTitleHover] = useState(false)
   const rowRef = useRef(null)
   const [isMoved, setIsMoved] = useState(false)
+  const [currentMovie, setCurrentMovie] = useRecoilState(movieState)
+  const [showModal, setShowModal] = useRecoilState(modalState)
 
   const handleClick = direction => {
     setIsMoved(true)
@@ -46,16 +50,9 @@ const Row = ({ title, fetchUrl }) => {
   }
 
   const handleHover = movie => {
-    if (trailerUrl) {
-      setTrailerUrl('')
-    } else {
-      movieTrailer(movie?.name || '')
-        .then(url => {
-          const urlParams = new URLSearchParams(new URL(url).search)
-          setTrailerUrl(urlParams.get('v'))
-        })
-        .catch(error => console.log(error))
-    }
+    if (!movie) return
+    setCurrentMovie(movie)
+    setShowModal(true)
   }
   return (
     <div
@@ -87,7 +84,9 @@ const Row = ({ title, fetchUrl }) => {
 
       <div className="relative group">
         <MdArrowBackIos
-          className={`absolute top-[50%] left-2 h-6 w-6 z-40 text-white cursor-pointer transition-all duration-150 md:group-hover:scale-125 opacity-0 md:group-hover:opacity-100 ${!isMoved && 'hidden'}`}
+          className={`absolute top-[50%] left-2 h-6 w-6 z-40 text-white cursor-pointer transition-all duration-150 md:group-hover:scale-125 opacity-0 md:group-hover:opacity-100 ${
+            !isMoved && 'hidden'
+          }`}
           onClick={() => handleClick('left')}
         />
         <div
@@ -109,7 +108,6 @@ const Row = ({ title, fetchUrl }) => {
           onClick={() => handleClick('right')}
         />
       </div>
-      {trailerUrl && <Youtube videoId={trailerUrl} opts={opts} />}
     </div>
   )
 }

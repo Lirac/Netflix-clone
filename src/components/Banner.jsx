@@ -5,13 +5,17 @@ import { FaPlay } from 'react-icons/fa'
 import { MdInfoOutline } from 'react-icons/md'
 import { AiOutlineReload } from 'react-icons/ai'
 import { IconContext } from 'react-icons'
+import { useRecoilState } from 'recoil'
+import { modalState, movieState } from '../atoms/modalAtom'
 
 const Banner = () => {
   const [movie, setMovie] = useState([])
+  const [showModal, setShowModal] = useRecoilState(modalState)
+  const [currentMovie, setCurrentMovie] = useRecoilState(movieState)
 
   useEffect(() => {
     async function fetchData() {
-      const request = await axios.get(requests.fetchNetflixOriginals)
+      const request = await axios.get(requests.fetchTrending)
       setMovie(
         request.data.results[
           Math.floor(Math.random() * request.data.results.length - 1)
@@ -26,13 +30,11 @@ const Banner = () => {
   }
   return (
     <header
-      style={
-        {
-          backgroundSize: 'cover',
-          backgroundImage: `url("https://image.tmdb.org/t/p/original/${movie?.backdrop_path}")`,
-          backgroundPosition: 'center center',
-        }
-      }
+      style={{
+        backgroundSize: 'cover',
+        backgroundImage: `url("https://image.tmdb.org/t/p/original/${movie?.backdrop_path}")`,
+        backgroundPosition: 'center center',
+      }}
       className="text-white object-contain h-[55vw] xl:h-[90vh] relative z-0"
     >
       {/* <img
@@ -48,11 +50,17 @@ const Banner = () => {
           {truncate(movie?.overview, 150)}
         </h1>
         <div className="mt-4 flex">
-          <div className="px-2 lg:px-8 lg:py-2  font-medium bg-white hover:bg-white/90 text-black rounded-sm md:rounded-md mr-2 flex justify-around items-center gap-2 text-[1.8vw] lg:text-lg duration-200 ease-in transition-all">
+          <div className="px-2 lg:px-8 lg:py-2 cursor-pointer font-medium bg-white hover:bg-white/90 text-black rounded-sm md:rounded-md mr-2 flex justify-around items-center gap-2 text-[1.8vw] lg:text-lg duration-200 ease-in transition-all">
             <FaPlay />
             Play
           </div>
-          <button className=" py-1 px-2 lg:px-8 lg:py-2 font-semibold bg-gray-400/80 hover:bg-gray-400/50 text-white rounded-sm md:rounded-md  flex justify-center items-center gap-2 text-[1.8vw] lg:text-lg duration-200 ease-in transition-all">
+          <button
+            onClick={() => {
+              setShowModal(true)
+              setCurrentMovie(movie)
+            }}
+            className=" py-1 px-2 lg:px-8 lg:py-2 font-semibold bg-gray-400/80 hover:bg-gray-400/50 text-white rounded-sm md:rounded-md  flex justify-center items-center gap-2 text-[1.8vw] lg:text-lg duration-200 ease-in transition-all"
+          >
             <IconContext.Provider value={{}}>
               <MdInfoOutline /> More Info
             </IconContext.Provider>

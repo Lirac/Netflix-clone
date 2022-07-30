@@ -3,13 +3,13 @@ import Nav from './components/nav/Nav'
 import Row from './components/Row'
 import Footer from './components/Footer'
 import requests from './services/request'
+import Modal from './components/Modal'
 
 function App() {
   return (
     <div className="bg-black relative">
-
       <Nav />
-      <Banner className=""/>
+      <Banner className="" />
       <div className="ml-4 lg:ml-8 bg-transparent xl:mt-[-3vw] pt-2">
         <Row
           title="NETFLIX ORIGINALS"
@@ -24,6 +24,7 @@ function App() {
         <Row title="Horror Movies" fetchUrl={requests.fetchHorrorMovies} />
       </div>
       <Footer></Footer>
+      <Modal />
     </div>
   )
 }
