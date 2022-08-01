@@ -5,13 +5,13 @@ import { FaPlay } from 'react-icons/fa'
 import { MdInfoOutline } from 'react-icons/md'
 import { AiOutlineReload } from 'react-icons/ai'
 import { IconContext } from 'react-icons'
-import { useRecoilState } from 'recoil'
+import { useSetRecoilState } from 'recoil'
 import { modalState, movieState } from '../atoms/modalAtom'
 
 const Banner = () => {
   const [movie, setMovie] = useState([])
-  const [showModal, setShowModal] = useRecoilState(modalState)
-  const [currentMovie, setCurrentMovie] = useRecoilState(movieState)
+  const setShowModal = useSetRecoilState(modalState)
+  const setCurrentMovie = useSetRecoilState(movieState)
 
   useEffect(() => {
     async function fetchData() {

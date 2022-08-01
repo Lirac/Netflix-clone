@@ -1,12 +1,10 @@
 import React, { useState, useEffect } from 'react'
 import axios from '../services/axios'
-import Youtube from 'react-youtube'
-import movieTrailer from 'movie-trailer'
 import { MdArrowForwardIos } from 'react-icons/md'
 import { MdArrowBackIos } from 'react-icons/md'
 import { IconContext } from 'react-icons/lib'
 import { useRef } from 'react'
-import { useRecoilState } from 'recoil'
+import { useSetRecoilState } from 'recoil'
 import { movieState } from '../atoms/modalAtom'
 import { modalState } from '../atoms/modalAtom'
 
@@ -17,8 +15,8 @@ const Row = ({ title, fetchUrl }) => {
   const [titleHover, setTitleHover] = useState(false)
   const rowRef = useRef(null)
   const [isMoved, setIsMoved] = useState(false)
-  const [currentMovie, setCurrentMovie] = useRecoilState(movieState)
-  const [showModal, setShowModal] = useRecoilState(modalState)
+  const setCurrentMovie = useSetRecoilState(movieState)
+  const setShowModal = useSetRecoilState(modalState)
 
   const handleClick = direction => {
     setIsMoved(true)
@@ -40,14 +38,6 @@ const Row = ({ title, fetchUrl }) => {
     }
     fetchData()
   }, [fetchUrl])
-
-  const opts = {
-    height: '390',
-    width: '100%',
-    playerVars: {
-      autoplay: 1,
-    },
-  }
 
   const handleHover = movie => {
     if (!movie) return

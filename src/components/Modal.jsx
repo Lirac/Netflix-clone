@@ -8,7 +8,7 @@ import {
   VolumeUpIcon,
   XIcon,
 } from '@heroicons/react/solid'
-import { useRecoilState } from 'recoil'
+import { useRecoilState, useRecoilValue } from 'recoil'
 import { movieState, modalState } from '../atoms/modalAtom'
 import { useState, useEffect } from 'react'
 import { FaDownload, FaPlay, FaPlus, FaThumbsUp } from 'react-icons/fa'
@@ -16,7 +16,7 @@ import { BsShare } from 'react-icons/bs'
 
 const Modal = () => {
   const [showModal, setShowModal] = useRecoilState(modalState)
-  const [movie, setMovie] = useRecoilState(movieState)
+  const movie = useRecoilValue(movieState)
   const [trailer, setTrailer] = useState('')
   const [genre, setGenre] = useState([])
   const [muted, setMuted] = useState(false)
@@ -39,7 +39,6 @@ const Modal = () => {
       )
         .then(res => res.json())
         .catch(err => console.log(err.message))
-      console.log(data)
       if (data?.videos?.results.length > 0) {
         const index = data.videos.results.findIndex(
           video => video.type === 'Trailer'
