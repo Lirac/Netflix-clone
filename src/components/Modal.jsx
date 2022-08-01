@@ -58,7 +58,7 @@ const Modal = () => {
     <MuiModal
       open={showModal}
       onClose={handleClose}
-      className="fixed !top-0 md:!top-10 left-0 right-0 z-50 mx-auto w-full max-w-[55rem] overflow-hidden rounded-md scrollbar-hide overflow-y-scroll"
+      className="fixed !top-0 md:!top-10 left-0 right-0 z-50 mx-auto w-full h-full max-w-[55rem] overflow-hidden rounded-md scrollbar-hide overflow-y-scroll"
     >
       <>
         <button
@@ -101,8 +101,8 @@ const Modal = () => {
           </div>
         </div>
 
-        <div className="px-5 md:px-10 rounded-b-md bg-[#181818] space-x-16 py-4 md:min-h-[400px] min-h-screen">
-          <div className="text-white h-44 space-y-6">
+        <div className="px-5 md:px-10 rounded-b-md bg-[#181818] space-x-16 py-4 md:pb-8 md:min-h-fit min-h-[80%]">
+          <div className="text-white space-y-6">
             <h3 className="md:hidden font-bold text-2xl">{movie?.title}</h3>
             <div className="flex items-center space-x-2 text-sm">
               <p className="font-semibold text-green-400">
@@ -128,7 +128,7 @@ const Modal = () => {
             </div>
 
             <div className="flex flex-col gap-x-10 gap-y-4 font-light md:flex-row space-y-4 md:space-y-0 items-start">
-              <p className="w-full md:w-4/6 font-normal h-fit">
+              <p className="w-full md:w-4/6 font-normal h-fit text-sm md:text-md">
                 {movie?.overview}
               </p>
               <div className="flex flex-wrap md:flex-col md:space-y-3 gap-2 text-sm">
@@ -151,7 +151,7 @@ const Modal = () => {
                 </div>
               </div>
 
-              <div className="flex md:hidden justify-center space-x-16 items-center w-full">
+              <div className="flex md:hidden justify-center space-x-16 items-center w-full text-xs">
                 <div className="flex flex-col items-center space-y-2">
                   <FaPlus className="h-5 w-5 text-white" />
                   <p>My List</p>

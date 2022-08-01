@@ -42,15 +42,21 @@ const Banner = () => {
         alt=""
         className='w-full h-full'
       /> */}
-      <div className="ml-4 lg:ml-8 w-[50%] absolute top-[30%] md:top-[40%] z-40">
-        <h1 className="text-[3vw] font-bold my-2">
+      <div className="ml-4 lg:ml-8 w-[60%] absolute top-[30%] md:top-[40%] z-10">
+        <h1 className="text-lg md:text-[3vw] font-bold my-2">
           {movie?.title || movie?.name || movie?.original_name}
         </h1>
         <h1 className="max-w-xs text-xs md:max-w-lg md:text-lg">
           {truncate(movie?.overview, 150)}
         </h1>
         <div className="mt-4 flex">
-          <div className="px-2 lg:px-8 lg:py-2 cursor-pointer font-medium bg-white hover:bg-white/90 text-black rounded-sm md:rounded-md mr-2 flex justify-around items-center gap-2 text-[1.8vw] lg:text-lg duration-200 ease-in transition-all">
+          <div
+            onClick={() => {
+              setShowModal(true)
+              setCurrentMovie(movie)
+            }}
+            className="px-2 lg:px-8 lg:py-2 cursor-pointer font-medium bg-white hover:bg-white/90 text-black rounded-sm md:rounded-md mr-2 flex justify-around items-center gap-2 text-[1.8vw] lg:text-lg duration-200 ease-in transition-all"
+          >
             <FaPlay />
             Play
           </div>
