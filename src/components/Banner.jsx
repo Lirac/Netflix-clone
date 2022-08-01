@@ -35,14 +35,14 @@ const Banner = () => {
         backgroundImage: `url("https://image.tmdb.org/t/p/original/${movie?.backdrop_path}")`,
         backgroundPosition: 'center center',
       }}
-      className="text-white object-contain h-[55vw] xl:h-[90vh] relative z-0"
+      className="text-white object-contain h-[55vw] xl:h-[90vh] relative"
     >
       {/* <img
         src={`https://image.tmdb.org/t/p/original/${movie?.backdrop_path}`}
         alt=""
         className='w-full h-full'
       /> */}
-      <div className="ml-4 lg:ml-8 w-[50%] absolute top-[40%]">
+      <div className="ml-4 lg:ml-8 w-[50%] absolute top-[30%] md:top-[40%] z-40">
         <h1 className="text-[3vw] font-bold my-2">
           {movie?.title || movie?.name || movie?.original_name}
         </h1>

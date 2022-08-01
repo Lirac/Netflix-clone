@@ -6,6 +6,10 @@
   .modalButton {
     @apply flex h-11 w-11 items-center justify-center rounded-full border-2 border-[gray] bg-[#2a2a2a]/60 transition hover:border-white hover:bg-white/20 text-white;
   }
+
+  .modalButtonBlock {
+    @apply w-full bg-white text-black py-2 rounded-sm font-medium text-sm flex justify-center items-center gap-2
+  }
 }
 @layer utilities {
   .scrollbar::-webkit-scrollbar {

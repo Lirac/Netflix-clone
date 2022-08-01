@@ -56,7 +56,7 @@ const Row = ({ title, fetchUrl }) => {
   }
   return (
     <div
-      className="mt-8"
+      className="mt-8 z-40"
       onMouseLeave={() => {
         setTitleHover(false)
       }}
